@@ -14,6 +14,22 @@ require_once __DIR__ . '/database/database.php';
     <title>Spoti-phyp</title>
 </head>
 <body>
+    <div class="webapp">
+        <div class="header">
+            <img src="img/logo-spotify.png" alt="">
+        </div>
+        <div class="main">
+            <!-- strutturo il foresch per ciclare le info delle card -->
+            <?php foreach ($database as $disk) { ?>
+            <div class="card">
+                <img src= <?php echo $disk['poster'] ?> alt="">
+                <div class="title"><?php echo $disk['title'] ?></div>
+                <div class="author"><?php echo $disk['author'] ?></div>
+                <div class="year"><?php echo $disk['year'] ?></div>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
     
 </body>
 </html>
