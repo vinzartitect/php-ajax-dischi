@@ -4,9 +4,10 @@ var app = new Vue({
         arrayDisk: [],
     },
     created() {
-        axios.get('http://localhost/4%20-%20php%20dischi/php-ajax-dischi/milestone2/database/database.php')
+        axios.get('http://localhost/4%20-%20php%20dischi/php-ajax-dischi/milestone2/api/dischi.php')
             .then((res) => {
-            this.arrayDisk = res.data
+                console.log(res.data);
+                this.arrayDisk = res.data;
         })
     }
 
